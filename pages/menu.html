@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котокафе VelvetPaws</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Andika&display=swap" rel="stylesheet">
+    <!-- Подключение Tailwind CSS через CDN для быстрой стилизации компонентов -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение библиотеки иконок Font Awesome через CDN для использования векторных иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Подключение пользовательских шрифтов Google Fonts для улучшения типографики -->
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <!-- Настройка Favicon сайта в форматах SVG и PNG для отображения в браузере -->
+    <style>
+        :root {
+            --primary: #D30C7B;
+            --secondary: #FFE3DC;
+            --accent: #DBB4AD;
+            --dark: #4A2C2A;
+            --light: #FFF9F7;
+        }
+    </style>
+</head>
+<body class="font-['Andika'] bg-[#FFF9F7] text-[#4A2C2A] min-h-screen flex flex-col">
+    <!-- Шапка -->
+    <header class="bg-white shadow py-4">
+        <nav class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                <i class="fas fa-cat text-2xl text-[#D30C7B]"></i>
+                <a href="../index.html" class="text-xl font-['Gabriela'] font-bold text-[#D30C7B]">VelvetPaws</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="../index.html" class="hover:text-[#D30C7B]">Главная</a>
+                <a href="cats.html" class="hover:text-[#D30C7B]">Кошки</a>
+                <a href="menu.html" class="hover:text-[#D30C7B]">Меню</a>
+                <a href="booking.html" class="hover:text-[#D30C7B]">Бронирование</a>
+                <a href="events.html" class="hover:text-[#D30C7B]">Мероприятия</a>
+            </div>
+            <div class="flex items-center space-x-3 mt-4 md:mt-0">
+                <i class="fas fa-moon cursor-pointer text-[#D30C7B] hover:text-[#4A2C2A] transition-colors" title="Переключить тему"></i>
+                <a href="user.html" class="fas fa-user text-[#D30C7B] hidden md:block"></i>
+                <a href="login.html" class="bg-[#FFE3DC] px-3 py-1 rounded hover:bg-[#DBB4AD]">Войти</a>
+                <a href="register.html" class="bg-[#D30C7B] text-white px-3 py-1 rounded hover:bg-[#4A2C2A]">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+
+       
+    <!-- Основной контент -->
+    <main class="flex-grow py-8">
+        <div class="container mx-auto px-4">
+            <h1 class="text-4xl font-['Gabriela'] text-center mb-8 text-[#D30C7B]">Наше меню</h1>
+            
+            <!-- Горячие напитки -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-['Gabriela'] mb-4 flex items-center">
+                    <i class="fas fa-coffee mr-3 text-[#D30C7B]"></i>
+                    Горячие напитки
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Кофе "Мурлыка"</h3>
+                            <span class="text-[#D30C7B] font-bold">250 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">Эспрессо с молоком и карамелью</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Капучино "Кошачьи лапки"</h3>
+                            <span class="text-[#D30C7B] font-bold">280 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">С рисунком кошачьей лапки</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Чай "Пушистый хвост"</h3>
+                            <span class="text-[#D30C7B] font-bold">200 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">Травяной сбор с мятой</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Горячий шоколад</h3>
+                            <span class="text-[#D30C7B] font-bold">320 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">Густой шоколад со сливками</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Холодные напитки -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-['Gabriela'] mb-4 flex items-center">
+                    <i class="fas fa-glass-whiskey mr-3 text-[#D30C7B]"></i>
+                    Холодные напитки
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Лимонад "Кошачий взгляд"</h3>
+                            <span class="text-[#D30C7B] font-bold">280 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">С мятой и лаймом</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Молочный коктейль</h3>
+                            <span class="text-[#D30C7B] font-bold">350 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">Ванильный с карамелью</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Десерты -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-['Gabriela'] mb-4 flex items-center">
+                    <i class="fas fa-birthday-cake mr-3 text-[#D30C7B]"></i>
+                    Десерты
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Чизкейк "Нью-Йорк"</h3>
+                            <span class="text-[#D30C7B] font-bold">380 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">С ягодным соусом</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Тирамису</h3>
+                            <span class="text-[#D30C7B] font-bold">350 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">Итальянский десерт</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Для котиков -->
+            <div class="mb-10">
+                <h2 class="text-2xl font-['Gabriela'] mb-4 flex items-center">
+                    <i class="fas fa-paw mr-3 text-[#D30C7B]"></i>
+                    Для котиков
+                </h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Сушеная рыбка</h3>
+                            <span class="text-[#D30C7B] font-bold">150 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">Натуральное лакомство</p>
+                    </div>
+                    
+                    <div class="bg-white p-4 rounded shadow">
+                        <div class="flex justify-between items-center">
+                            <h3 class="text-lg font-medium">Витаминные подушечки</h3>
+                            <span class="text-[#D30C7B] font-bold">180 ₽</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mt-1">Полезное лакомство</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+
+    <!-- Подвал сайта -->
+<footer class="bg-[#4A2C2A] text-white py-6 mt-auto">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Колонка 1: О котокафе -->
+            <div>
+                <h3 class="text-align-justify font-['Gabriela'] font-bold mb-3">VelvetPaws</h3>
+                <p class="text-align text-white-300">
+                    Пространство, где любовь к кошкам встречается с социальной ответственностью и качественным отдыхом.
+                </p>
+            </div>
+
+            <!-- Колонка 2: Быстрые ссылки -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Быстрые ссылки</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="../index.html" class="hover:text-[#DBB4AD] transition-colors">Главная</a></li>
+                    <li><a href="cats.html" class="hover:text-[#DBB4AD] transition-colors">Наши кошки</a></li>
+                    <li><a href="menu.html" class="hover:text-[#DBB4AD] transition-colors">Меню</a></li>
+                    <li><a href="booking.html" class="hover:text-[#DBB4AD] transition-colors">Бронирование</a></li>
+                    <li><a href="events.html" class="hover:text-[#DBB4AD] transition-colors">Мероприятия</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонка 3: Контакты -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Контакты</h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2 text-[#DBB4AD]"></i>
+                        <span>г. Новосибирск, ул. Кошачья, 15</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-2 text-[#DBB4AD]"></i>
+                        <span>+7 (383) 123-45-67</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-2 text-[#DBB4AD]"></i>
+                        <span>info@velvetpaws.ru</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Колонка 4: Социальные сети -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Мы в соцсетях</h3>
+                <div class="flex space-x-3">
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="ВКонтакте">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Копирайт -->
+        <div class="border-t border-white-600 mt-6 pt-4 text-center text-white-400 text-sm">
+            <p>&copy; 2026 Котокафе VelvetPaws. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котокафе VelvetPaws</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Andika&display=swap" rel="stylesheet">
+    <!-- Подключение Tailwind CSS через CDN для быстрой стилизации компонентов -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение библиотеки иконок Font Awesome через CDN для использования векторных иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Подключение пользовательских шрифтов Google Fonts для улучшения типографики -->
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <!-- Настройка Favicon сайта в форматах SVG и PNG для отображения в браузере -->
+    <style>
+        :root {
+            --primary: #D30C7B;
+            --secondary: #FFE3DC;
+            --accent: #DBB4AD;
+            --dark: #4A2C2A;
+            --light: #FFF9F7;
+        }
+    </style>
+</head>
+<body class="font-['Andika'] bg-[#FFF9F7] text-[#4A2C2A] min-h-screen flex flex-col">
+    <!-- Шапка -->
+    <header class="bg-white shadow py-4">
+        <nav class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                <i class="fas fa-cat text-2xl text-[#D30C7B]"></i>
+                <a href="../index.html" class="text-xl font-['Gabriela'] font-bold text-[#D30C7B]">VelvetPaws</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="../index.html" class="hover:text-[#D30C7B]">Главная</a>
+                <a href="cats.html" class="hover:text-[#D30C7B]">Кошки</a>
+                <a href="menu.html" class="hover:text-[#D30C7B]">Меню</a>
+                <a href="booking.html" class="hover:text-[#D30C7B]">Бронирование</a>
+                <a href="events.html" class="hover:text-[#D30C7B]">Мероприятия</a>
+            </div>
+            <div class="flex items-center space-x-3 mt-4 md:mt-0">
+                <i class="fas fa-moon cursor-pointer text-[#D30C7B] hover:text-[#4A2C2A] transition-colors" title="Переключить тему"></i>
+                <a href="user.html" class="fas fa-user text-[#D30C7B] hidden md:block"></i>               
+                <a href="login.html" class="bg-[#FFE3DC] px-3 py-1 rounded hover:bg-[#DBB4AD]">Войти</a>
+                <a href="register.html" class="bg-[#D30C7B] text-white px-3 py-1 rounded hover:bg-[#4A2C2A]">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Основной контент -->
+    <main class="flex-grow">
+        <div class="container mx-auto px-4 py-8">
+            <h1 class="text-3xl font-['Gabriela'] text-[#D30C7B] mb-8">Личный кабинет</h1>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                <!-- Боковая панель -->
+                <div class="lg:col-span-1">
+                    <div class="bg-white rounded-lg shadow p-6 mb-6">
+                        <div class="text-center mb-6">
+                            <div class="w-20 h-20 rounded-full bg-[#FFE3DC] flex items-center justify-center text-3xl text-[#D30C7B] mx-auto mb-3">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <h2 class="text-lg font-medium">Пользователь</h2>
+                            <p class="text-gray-500 text-sm">example@email.com</p>
+                        </div>
+                        
+                        <div class="space-y-2">
+                            <a href="#" class="block p-3 rounded bg-[#FFE3DC]">
+                                <i class="fas fa-user-circle mr-2"></i>Профиль
+                            </a>
+                            <a href="#" class="block p-3 rounded hover:bg-gray-100">
+                                <i class="fas fa-calendar-alt mr-2"></i>Мои бронирования
+                            </a>
+                            <a href="#" class="block p-3 rounded hover:bg-gray-100">
+                                <i class="fas fa-heart mr-2"></i>Любимые котики
+                            </a>
+                            <a href="#" class="block p-3 rounded hover:bg-gray-100">
+                                <i class="fas fa-cog mr-2"></i>Настройки
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Основной контент -->
+                <div class="lg:col-span-3">
+                    <!-- Профиль -->
+                    <div class="bg-white rounded-lg shadow p-6 mb-6">
+                        <h2 class="text-xl font-['Gabriela'] text-[#D30C7B] mb-4">Мой профиль</h2>
+                        
+                        <div class="space-y-4">
+                            <div>
+                                <label class="block text-gray-600 mb-1">Имя</label>
+                                <p>Пользователь</p>
+                            </div>
+                            <div>
+                                <label class="block text-gray-600 mb-1">Email</label>
+                                <p>example@email.com</p>
+                            </div>
+                            <div>
+                                <label class="block text-gray-600 mb-1">Телефон</label>
+                                <p>Не указан</p>
+                            </div>
+                            
+                            <button class="bg-[#D30C7B] text-white px-4 py-2 rounded hover:bg-[#4A2C2A]">
+                                Редактировать профиль
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- Мои бронирования -->
+                    <div class="bg-white rounded-lg shadow p-6 mb-6">
+                        <h2 class="text-xl font-['Gabriela'] text-[#D30C7B] mb-4">Мои бронирования</h2>
+                        
+                        <div class="text-center py-8 text-gray-500">
+                            <i class="fas fa-calendar-times text-4xl mb-3"></i>
+                            <p>У вас пока нет бронирований</p>
+                            <a href="booking.html" class="text-[#D30C7B] hover:text-[#4A2C2A] mt-2 inline-block">
+                                Забронировать визит
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <!-- Любимые котики -->
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <h2 class="text-xl font-['Gabriela'] text-[#D30C7B] mb-4">Любимые котики</h2>
+                        
+                        <div class="text-center py-8 text-gray-500">
+                            <i class="fas fa-heart text-4xl mb-3"></i>
+                            <p>У вас пока нет любимых котиков</p>
+                            <a href="cats.html" class="text-[#D30C7B] hover:text-[#4A2C2A] mt-2 inline-block">
+                                Посмотреть котиков
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+       
+    <!-- Подвал сайта -->
+<footer class="bg-[#4A2C2A] text-white py-6 mt-auto">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Колонка 1: О котокафе -->
+            <div>
+                <h3 class="text-align-justify font-['Gabriela'] font-bold mb-3">VelvetPaws</h3>
+                <p class="text-align text-white-300">
+                    Пространство, где любовь к кошкам встречается с социальной ответственностью и качественным отдыхом.
+                </p>
+            </div>
+
+            <!-- Колонка 2: Быстрые ссылки -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Быстрые ссылки</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="../index.html" class="hover:text-[#DBB4AD] transition-colors">Главная</a></li>
+                    <li><a href="cats.html" class="hover:text-[#DBB4AD] transition-colors">Наши кошки</a></li>
+                    <li><a href="menu.html" class="hover:text-[#DBB4AD] transition-colors">Меню</a></li>
+                    <li><a href="booking.html" class="hover:text-[#DBB4AD] transition-colors">Бронирование</a></li>
+                    <li><a href="events.html" class="hover:text-[#DBB4AD] transition-colors">Мероприятия</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонка 3: Контакты -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Контакты</h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2 text-[#DBB4AD]"></i>
+                        <span>г. Новосибирск, ул. Кошачья, 15</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-2 text-[#DBB4AD]"></i>
+                        <span>+7 (383) 123-45-67</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-2 text-[#DBB4AD]"></i>
+                        <span>info@velvetpaws.ru</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Колонка 4: Социальные сети -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Мы в соцсетях</h3>
+                <div class="flex space-x-3">
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="ВКонтакте">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Копирайт -->
+        <div class="border-t border-white-600 mt-6 pt-4 text-center text-white-400 text-sm">
+            <p>&copy; 2026 Котокафе VelvetPaws. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

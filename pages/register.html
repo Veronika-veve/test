@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Котокафе VelvetPaws</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Gabriela&family=Andika&display=swap" rel="stylesheet">
+    <!-- Подключение Tailwind CSS через CDN для быстрой стилизации компонентов -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Подключение библиотеки иконок Font Awesome через CDN для использования векторных иконок -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <!-- Подключение пользовательских шрифтов Google Fonts для улучшения типографики -->
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+    <!-- Настройка Favicon сайта в форматах SVG и PNG для отображения в браузере -->
+    <style>
+        :root {
+            --primary: #D30C7B;
+            --secondary: #FFE3DC;
+            --accent: #DBB4AD;
+            --dark: #4A2C2A;
+            --light: #FFF9F7;
+        }
+    </style>
+</head>
+<body class="font-['Andika'] bg-[#FFF9F7] text-[#4A2C2A] min-h-screen flex flex-col">
+    <!-- Шапка -->
+    <header class="bg-white shadow py-4">
+        <nav class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center space-x-3 mb-4 md:mb-0">
+                <i class="fas fa-cat text-2xl text-[#D30C7B]"></i>
+                <a href="../index.html" class="text-xl font-['Gabriela'] font-bold text-[#D30C7B]">VelvetPaws</a>
+            </div>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="../index.html" class="hover:text-[#D30C7B]">Главная</a>
+                <a href="cats.html" class="hover:text-[#D30C7B]">Кошки</a>
+                <a href="menu.html" class="hover:text-[#D30C7B]">Меню</a>
+                <a href="booking.html" class="hover:text-[#D30C7B]">Бронирование</a>
+                <a href="events.html" class="hover:text-[#D30C7B]">Мероприятия</a>
+            </div>
+            <div class="flex items-center space-x-3 mt-4 md:mt-0">
+                <i class="fas fa-moon cursor-pointer text-[#D30C7B] hover:text-[#4A2C2A] transition-colors" title="Переключить тему"></i>
+                <a href="user.html" class="fas fa-user text-[#D30C7B] hidden md:block"></i>
+                <a href="login.html" class="bg-[#FFE3DC] px-3 py-1 rounded hover:bg-[#DBB4AD]">Войти</a>
+                <a href="register.html" class="bg-[#D30C7B] text-white px-3 py-1 rounded hover:bg-[#4A2C2A]">Регистрация</a>
+            </div>
+        </nav>
+    </header>
+
+       
+
+    <!-- Основной контент -->
+    <main class="flex-grow container mx-auto px-4 py-12">
+        <div class="max-w-2xl mx-auto">
+            <!-- Форма регистрации -->
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <form id="registerForm">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <!-- Имя -->
+                        <div>
+                            <label for="firstName" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-user text-[#D30C7B] mr-2"></i>Имя
+                            </label>
+                            <input 
+                                type="text" 
+                                id="firstName" 
+                                name="firstName"
+                                placeholder="Ваше имя" 
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D30C7B] focus:border-transparent transition"
+                            >
+                        </div>
+
+                        <!-- Фамилия -->
+                        <div>
+                            <label for="lastName" class="block text-sm font-medium text-gray-700 mb-2">
+                                Фамилия
+                            </label>
+                            <input 
+                                type="text" 
+                                id="lastName" 
+                                name="lastName"
+                                placeholder="Ваша фамилия" 
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D30C7B] focus:border-transparent transition"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="mb-6">
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">
+                            <i class="fas fa-envelope text-[#D30C7B] mr-2"></i>Email
+                        </label>
+                        <input 
+                            type="email" 
+                            id="email" 
+                            name="email"
+                            placeholder="ваш@email.ru" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D30C7B] focus:border-transparent transition"
+                        >
+                    </div>
+
+                    <!-- Телефон -->
+                    <div class="mb-6">
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">
+                            <i class="fas fa-phone text-[#D30C7B] mr-2"></i>Телефон
+                        </label>
+                        <input 
+                            type="tel" 
+                            id="phone" 
+                            name="phone"
+                            placeholder="+7 (999) 123-45-67" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D30C7B] focus:border-transparent transition"
+                        >
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                        <!-- Пароль -->
+                        <div>
+                            <label for="password" class="block text-sm font-medium text-gray-700 mb-2">
+                                <i class="fas fa-lock text-[#D30C7B] mr-2"></i>Пароль
+                            </label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password"
+                                placeholder="Создайте пароль" 
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D30C7B] focus:border-transparent transition"
+                            >
+                            <p class="text-xs text-gray-500 mt-1">Минимум 6 символов</p>
+                        </div>
+
+                        <!-- Подтверждение пароля -->
+                        <div>
+                            <label for="confirmPassword" class="block text-sm font-medium text-gray-700 mb-2">
+                                Подтвердите пароль
+                            </label>
+                            <input 
+                                type="password" 
+                                id="confirmPassword" 
+                                name="confirmPassword"
+                                placeholder="Повторите пароль" 
+                                required
+                                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D30C7B] focus:border-transparent transition"
+                            >
+                        </div>
+                    </div>
+
+                    <!-- Дата рождения -->
+                    <div class="mb-6">
+                        <label for="birthDate" class="block text-sm font-medium text-gray-700 mb-2">
+                            <i class="fas fa-birthday-cake text-[#D30C7B] mr-2"></i>Дата рождения
+                        </label>
+                        <input 
+                            type="date" 
+                            id="birthDate" 
+                            name="birthDate"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#D30C7B] focus:border-transparent transition"
+                        >
+                    </div>
+
+                    <!-- Подписка -->
+                    <div class="mb-6">
+                        <label class="flex items-start">
+                            <input type="checkbox" class="rounded text-[#D30C7B] focus:ring-[#D30C7B] mt-1">
+                            <span class="ml-2 text-sm">
+                                Хочу получать новости о мероприятиях и специальные предложения по email
+                            </span>
+                        </label>
+                    </div>
+
+                    <!-- Согласие с условиями -->
+                    <div class="mb-8">
+                        <label class="flex items-start">
+                            <input type="checkbox" required class="rounded text-[#D30C7B] focus:ring-[#D30C7B] mt-1">
+                            <span class="ml-2 text-sm">
+                                Я соглашаюсь с 
+                                <a href="#" class="text-[#D30C7B] hover:text-[#4A2C2A]">Условиями использования</a> 
+                                и 
+                                <a href="#" class="text-[#D30C7B] hover:text-[#4A2C2A]">Политикой конфиденциальности</a>
+                            </span>
+                        </label>
+                    </div>
+
+
+                    <!-- Кнопка регистрации -->
+                    <button 
+                        type="submit" 
+                        class="w-full bg-[#D30C7B] text-white py-3 rounded-lg hover:bg-[#4A2C2A] transition duration-300 font-medium mb-4"
+                    >
+                        <i class="fas fa-user-plus mr-2"></i>Зарегистрироваться
+                    </button>
+
+                    <!-- Ссылка на вход -->
+                    <div class="text-center text-sm text-gray-600">
+                        <p>Уже есть аккаунт? 
+                            <a href="login.html" class="text-[#D30C7B] hover:text-[#4A2C2A] font-medium">
+                                Войти
+                            </a>
+                        </p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Подвал сайта -->
+<footer class="bg-[#4A2C2A] text-white py-6 mt-auto">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+            <!-- Колонка 1: О котокафе -->
+            <div>
+                <h3 class="text-align-justify font-['Gabriela'] font-bold mb-3">VelvetPaws</h3>
+                <p class="text-align text-white-300">
+                    Пространство, где любовь к кошкам встречается с социальной ответственностью и качественным отдыхом.
+                </p>
+            </div>
+
+            <!-- Колонка 2: Быстрые ссылки -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Быстрые ссылки</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="../index.html" class="hover:text-[#DBB4AD] transition-colors">Главная</a></li>
+                    <li><a href="cats.html" class="hover:text-[#DBB4AD] transition-colors">Наши кошки</a></li>
+                    <li><a href="menu.html" class="hover:text-[#DBB4AD] transition-colors">Меню</a></li>
+                    <li><a href="booking.html" class="hover:text-[#DBB4AD] transition-colors">Бронирование</a></li>
+                    <li><a href="events.html" class="hover:text-[#DBB4AD] transition-colors">Мероприятия</a></li>
+                </ul>
+            </div>
+
+            <!-- Колонка 3: Контакты -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Контакты</h3>
+                <ul class="space-y-2 text-sm">
+                    <li class="flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2 text-[#DBB4AD]"></i>
+                        <span>г. Новосибирск, ул. Кошачья, 15</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-phone mr-2 text-[#DBB4AD]"></i>
+                        <span>+7 (383) 123-45-67</span>
+                    </li>
+                    <li class="flex items-center">
+                        <i class="fas fa-envelope mr-2 text-[#DBB4AD]"></i>
+                        <span>info@velvetpaws.ru</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Колонка 4: Социальные сети -->
+            <div>
+                <h3 class="text-lg font-['Gabriela'] font-bold mb-3">Мы в соцсетях</h3>
+                <div class="flex space-x-3">
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="ВКонтакте">
+                        <i class="fab fa-vk"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="Telegram">
+                        <i class="fab fa-telegram"></i>
+                    </a>
+                    <a href="#" class="text-xl hover:text-[#DBB4AD] transition-colors" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Копирайт -->
+        <div class="border-t border-white-600 mt-6 pt-4 text-center text-white-400 text-sm">
+            <p>&copy; 2026 Котокафе VelvetPaws. Все права защищены.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
